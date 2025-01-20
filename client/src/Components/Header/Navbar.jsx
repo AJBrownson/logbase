@@ -58,16 +58,6 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" onClick={scrollToTop}>
-                  BLOG
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={scrollToTop}>
-                  ABOUT
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" onClick={scrollToTop}>
                   CONTACT
                 </Link>
@@ -143,16 +133,6 @@ const Navbar = () => {
                 <li>
                   <Link to="/shop" onClick={toggleMobileMenu}>
                     SHOP
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" onClick={toggleMobileMenu}>
-                    BLOG
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" onClick={toggleMobileMenu}>
-                    ABOUT
                   </Link>
                 </li>
                 <li>
