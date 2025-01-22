@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AdditionalInfo from "../Components/Product/AdditonInfo/AdditionalInfo";
 import Product from "../Components/Product/ProductMain/Product";
-import RelatedProducts from "../Components/Product/RelatedProducts/RelatedProducts";
 import { fetchProductDetails } from "../Features/Product/productSlice";
 
 const ProductDetails = () => {
@@ -27,7 +26,6 @@ const ProductDetails = () => {
         <>
           <Product product={productData} />
           <AdditionalInfo product={productData} />
-          <RelatedProducts productId={productData._id} />
         </>
       )}
     </>

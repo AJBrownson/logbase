@@ -27,7 +27,7 @@ const CardItemTwo = ({
         />
       ) : (
         <>
-          {title === "Today Order" || title === "Yesterday Order" ? (
+          {title === "Today's Order" || title === "Yesterday's Order" ? (
             <Card className={`flex justify-center h-full`}>
               <CardBody
                 className={`border border-gray-200 justify-between dark:border-gray-800 w-full p-6 rounded-lg ${className}`}

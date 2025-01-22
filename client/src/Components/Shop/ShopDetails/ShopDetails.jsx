@@ -11,6 +11,7 @@ import { fetchProducts } from "../../../Features/Product/productSlice"; // Impor
 import Filter from "../Filters/Filter";
 import "./ShopDetails.css";
 
+
 const ShopDetails = () => {
   const dispatch = useDispatch();
   const [wishList, setWishList] = useState({});
@@ -159,10 +160,6 @@ const ShopDetails = () => {
                 {productStatus === 'loading' && <p>Loading...</p>}
                 {productStatus === 'failed' && <p>{productError}</p>}
                 {productStatus === 'succeeded' &&
-                // nếu rỗng thì hiển thị là không có sản phẩm nào
-               
-                // nếu có sản phẩm thì hiển thị sản phẩm
-
                 // check if products is an array and has length
                 Array.isArray(products) && products.length > 0 &&
                   products.map((product,index) => (

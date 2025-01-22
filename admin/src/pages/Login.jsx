@@ -105,7 +105,7 @@ const Login = () => {
                     className="text-sm font-medium text-emerald-500 dark:text-emerald-400 hover:underline"
                     to="/forgot-password"
                   >
-                    {"ForgotPassword"}
+                    {"Forgot Password"}
                   </Link>
                 </p>
                 <p className="mt-1">
