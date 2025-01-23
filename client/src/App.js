@@ -23,7 +23,7 @@ import AvailableProducts from "./Components/Dashboard/AvailableProducts";
 import Dashboard from "./Pages/Dashboard"
 import BuyFollowers from "./Components/Dashboard/BuyFollowers";
 import Orders from "./Components/Dashboard/Orders";
-import Wallet from "./Components/Dashboard/Wallet"
+import Wallet from "./Components/UserWallet/Wallet";
 
 
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
 
           <Route path="/dashboard/:userId" element={<DashboardLayout />}>
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="overview" element={<Dashboard />} />
             <Route path="products" element={<AvailableProducts />} />
             <Route path="buy-followers" element={<BuyFollowers />} />
             <Route path="orders" element={<Orders />} />

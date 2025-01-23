@@ -8,12 +8,11 @@ const DashboardLayout = () => {
   const userId = "user123";
 
   const menuItems = [
-    { path: `/dashboard/${userId}`, icon: <MdDashboard className="w-6 h-6" />, title: 'Dashboard' },
+    { path: `/dashboard/${userId}/overview`, icon: <MdDashboard className="w-6 h-6" />, title: 'Dashboard' },
     { path: `/dashboard/${userId}/products`, icon: <MdShoppingBag className="w-6 h-6" />, title: 'Products' },
     { path: `/dashboard/${userId}/buy-followers`, icon: <MdPeople className="w-6 h-6" />, title: 'Buy Followers' },
     { path: `/dashboard/${userId}/orders`, icon: <MdShoppingCart className="w-6 h-6" />, title: 'Orders' },
     { path: `/dashboard/${userId}/wallet`, icon: <MdAccountBalanceWallet className="w-6 h-6" />, title: 'Wallet' },
-
   ];
 
   return (

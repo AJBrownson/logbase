@@ -38,7 +38,6 @@ const ProductDetails = () => {
 
   const { handleChangePage, totalResults, resultsPerPage, dataTable } =
     useFilter(data?.variants);
-  // console.log('data',data)
 
   useEffect(() => {
     if (!loading) {
@@ -53,7 +52,7 @@ const ProductDetails = () => {
     }
   }, [attribue, data?.variants, loading, lang]);
 
-  console.log("product", data);
+  // console.log("product", data);
 
   return (
     <>
@@ -84,11 +83,11 @@ const ProductDetails = () => {
                     {"Status"}:{" "}
                     {data.status === "show" ? (
                       <span className="text-emerald-400">
-                        {"ThisProductShowing"}
+                        {"This Product is Showing"}
                       </span>
                     ) : (
                       <span className="text-red-400">
-                        {"ThisProductHidden"}
+                        {"This Product is Hidden"}
                       </span>
                     )}
                   </p>
@@ -117,12 +116,12 @@ const ProductDetails = () => {
               <div className="mb-3">
                 {data?.stock <= 0 ? (
                   <Badge type="danger">
-                    <span className="font-bold">{"StockOut"}</span>{" "}
+                    <span className="font-bold">{"Out of Stock"}</span>{" "}
                   </Badge>
                 ) : (
                   <Badge type="success">
                     {" "}
-                    <span className="font-bold">{"InStock"}</span>
+                    <span className="font-bold">{"In Stock"}</span>
                   </Badge>
                 )}
                 <span className="text-sm text-gray-500 dark:text-gray-400 font-medium pl-4">
@@ -155,7 +154,7 @@ const ProductDetails = () => {
                   onClick={() => handleUpdate(id)}
                   className="cursor-pointer leading-5 transition-colors duration-150 font-medium text-sm focus:outline-none px-5 py-2 rounded-md text-white bg-emerald-500 border border-transparent active:bg-emerald-600 hover:bg-emerald-600 "
                 >
-                  {"EditProduct"}
+                  {"Edit Product"}
                 </button>
               </div>
             </div>
