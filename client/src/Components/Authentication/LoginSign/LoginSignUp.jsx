@@ -27,7 +27,7 @@ const LoginSignUp = () => {
     try {
       // console.log(credentials)
       await dispatch(login(credentials)).unwrap();
-      navigate("/"); 
+      navigate("/dashboard");
     } catch (error) {
       console.error("Failed to login: ", error);
     }

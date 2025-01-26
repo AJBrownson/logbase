@@ -24,6 +24,8 @@ import Dashboard from "./Pages/Dashboard"
 import BuyFollowers from "./Components/Dashboard/BuyFollowers";
 import Orders from "./Components/Dashboard/Orders";
 import Wallet from "./Components/UserWallet/Wallet";
+import ProtectedRoutes from "./Components/ProtectedRoutes/ProtectedRoutes";
+
 
 
 const App = () => {
@@ -37,12 +39,15 @@ const App = () => {
           <Route path="/verify-email/:token" element={<VerifyPage />} />
           <Route path="/shop" element={<Shop />} />
 
-          <Route path="/dashboard/:userId" element={<DashboardLayout />}>
+          <Route element={<ProtectedRoutes />}>
+          {/* <Route path="/dashboard/:userId" element={<DashboardLayout />}> */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
             <Route path="overview" element={<Dashboard />} />
             <Route path="products" element={<AvailableProducts />} />
             <Route path="buy-followers" element={<BuyFollowers />} />
             <Route path="orders" element={<Orders />} />
             <Route path="wallet" element={<Wallet />} />
+            </Route>
           </Route>
 
           <Route path="/contact" element={<Contact />} />

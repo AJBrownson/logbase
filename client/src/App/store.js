@@ -6,6 +6,7 @@ import orderSlice from "../Features/Order/orderSlice";
 import productSlice from "../Features/Product/productSlice";
 import variantReducer from "../Features/Variant/variantSlice";
 import wishListSlice from "../Features/Wishlist/wishListSlice";
+
 const store = configureStore({
   reducer: {
     cart: cartSlice,

@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import baseApi from './../../utils/api';
 
 // Fetch products with pagination
+
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async ({  page, limit, title, category, price }) => {
@@ -19,6 +20,21 @@ export const fetchProducts = createAsyncThunk(
     return response.data;
   }
 );
+
+
+// export const fetchProducts = createAsyncThunk(
+//   'products/fetchProducts',
+//   async (categoryName, { rejectWithValue }) => {
+//     try {
+//       const response = await baseApi.get(`/category/${categoryName}`);
+//       return response.data;
+//     } catch (error) {
+//       return rejectWithValue(error.response.data);
+//     }
+//   }
+// );
+
+
 export const fetchProductDetails = createAsyncThunk('productDetails/fetchProductDetails', async (productId) => {
   const response = await baseApi.post(`/products/${productId}`); // Adjust the URL as needed
   return response.data;

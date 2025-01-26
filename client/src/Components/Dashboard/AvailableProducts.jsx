@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 // import { FaCartPlus, FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../Features/Product/productSlice";
+import { fetchProducts, fetchProductsByCategory } from "../../Features/Product/productSlice";
+
 
 export default function AvailableProducts() {
   const dispatch = useDispatch();
@@ -10,19 +11,16 @@ export default function AvailableProducts() {
   const productStatus = useSelector((state) => state.products.status);
   const productError = useSelector((state) => state.products.error);
 
-  // const [page, setPage] = useState(1);
-
+  // useEffect(() => {
+  //   dispatch(
+  //     fetchProducts({
+  // })
+  //   );
+  // }, [dispatch]);
   useEffect(() => {
-    dispatch(
-      fetchProducts({
-        // page,
-        // limit,
-        // title: searchTerm,
-        // category: selectedCategory,
-        // price: selectedPriceRange,
-      })
-    );
+    dispatch(fetchProducts("Available Products"));
   }, [dispatch]);
+
 
   return (
     <>

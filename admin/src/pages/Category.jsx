@@ -128,7 +128,7 @@ const Category = () => {
                     <FiEdit />
                   </span>
 
-                  {"BulkAction"}
+                  {"Bulk Action"}
                 </Button>
               </div>
               <div className="w-full md:w-32 lg:w-32 xl:w-32  mr-3 mb-3 lg:mb-0">
@@ -171,7 +171,7 @@ const Category = () => {
               <Input
                 ref={categoryRef}
                 type="search"
-                placeholder={"SearchCategory"}
+                placeholder={"Search Category"}
               />
             </div>
             <div className="flex items-center gap-2 flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
@@ -221,14 +221,14 @@ const Category = () => {
                   />
                 </TableCell>
 
-                <TableCell>{"catIdTbl"}</TableCell>
-                <TableCell>{"catIconTbl"}</TableCell>
-                <TableCell>{"CatTbName"}</TableCell>
-                <TableCell>{"CatTbDescription"}</TableCell>
+                <TableCell>{"Id"}</TableCell>
+                <TableCell>{"Icon"}</TableCell>
+                <TableCell>{"Name"}</TableCell>
+                <TableCell>{"Description"}</TableCell>
                 <TableCell className="text-center">
-                  {"catPublishedTbl"}
+                  {"Published"}
                 </TableCell>
-                <TableCell className="text-right">{"catActionsTbl"}</TableCell>
+                <TableCell className="text-right">{"Actions"}</TableCell>
               </tr>
             </TableHeader>
 

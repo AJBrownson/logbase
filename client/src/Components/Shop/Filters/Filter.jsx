@@ -9,6 +9,7 @@ import { BiSearch } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../../Features/Category/categorySlice"; // Import the fetchCategories action
 
+
 const Filter = ({ onCategoryChange, onPriceRangeChange, onSearchChange }) => {
   const dispatch = useDispatch();
   const [selectedCategory, setSelectedCategory] = useState("");
