@@ -31,7 +31,7 @@ const DashboardLayout = () => {
   // Handle Logout
   const handleLogout = () => {
     dispatch(logout()); // Dispatch the logout action
-    navigate("/login"); // Redirect to the login page
+    navigate("/loginSignUp"); // Redirect to the login page
   };
 
   return (
@@ -50,9 +50,8 @@ const DashboardLayout = () => {
 
         {/* User Information */}
         {isOpen && user && (
-          <div className="p-4 bg-gray-50 rounded-lg shadow mt-4">
-            <h3 className="text-sm font-semibold text-gray-700">Welcome,</h3>
-            <p className="text-gray-600">{user.name}</p>
+          <div className="p-4 bg-gray-50 rounded-lg shadow">
+            <h3 className="text-sm font-semibold text-gray-700">Welcome, {user.name}</h3>
             <p className="text-gray-500 text-xs">{user.email}</p>
           </div>
         )}
@@ -72,7 +71,7 @@ const DashboardLayout = () => {
           ))}
         </nav>
 
-        {/* Logout Button */}
+
         <button
           onClick={handleLogout}
           className="mt-auto p-4 w-full flex items-center hover:bg-gray-100"
