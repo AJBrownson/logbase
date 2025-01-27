@@ -17,6 +17,7 @@ export default function AvailableProducts() {
   // })
   //   );
   // }, [dispatch]);
+  
   useEffect(() => {
     dispatch(fetchProducts("Available Products"));
   }, [dispatch]);
