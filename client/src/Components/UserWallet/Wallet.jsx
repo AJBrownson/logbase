@@ -19,7 +19,7 @@ export default function WalletBalance() {
   // Function to fetch wallet data
   const fetchWalletData = async () => {
     try {
-      const response = await fetch("/api/wallet", {
+      const response = await fetch("/wallet", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

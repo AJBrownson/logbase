@@ -7,7 +7,7 @@ const addStaffEmailBody = (option) => {
 >
 
   <head>
-    <title>Dashtar</title>
+    <title>Logbase</title>
     <!--[if !mso]><!-->
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <!--<![endif]-->
