@@ -35,27 +35,32 @@ export default function AvailableProducts() {
               Array.isArray(products) &&
               products.length > 0 &&
               products.map((product, index) => (
-                <div className="sdProductContainer" key={index}>
+                // <div className="sdProductContainer" key={index}>
+                <div key={index} className="border border-slate-500">
                   <div className="sdProductImages">
                     <div>
                       <img
                         src={product.image[0]}
                         alt=""
-                        className="sdProduct_front"
+                        // className="sdProduct_front"
+                        className=""
                       />
                       <img
                         src={product.image[1]}
                         alt=""
-                        className="sdProduct_back"
+                        className=""
+                        // className="sdProduct_back"
                       />
                     </div>
                   </div>
-                  <div className="sdProductInfo">
+                  {/* <div className="sdProductInfo"> */}
+                  <div className="p-1">
                     <div className="sdProductCategoryWishlist">
-                      <p>{product.category.name}</p>
+                      {/* <p>{product.category.name}</p> */}
                     </div>
 
-                    <div className="sdProductNameInfo">
+                    {/* <div className="sdProductNameInfo"> */}
+                    <div className="">
                       <h5>{product.title}</h5>
                       <p className="mt-4">
                         ₦
