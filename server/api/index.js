@@ -16,6 +16,7 @@ const settingRoutes = require("../routes/settingRoutes");
 const homePageRoutes = require("../routes/homepageRoutes");
 const cartRoutes = require('../routes/cartRoutes');
 const reviewsRoutes = require('../routes/reviewRoutes');
+const walletRoutes = require('../routes/walletRoutes');
 
 connectDB();
 const app = express();
@@ -47,6 +48,9 @@ app.use("/cart/", cartRoutes);
 app.use("/reviews/", reviewsRoutes);
 
 app.use("/homepage/", homePageRoutes);
+
+// wallet routes
+app.use("/wallet", walletRoutes);
 
 //if you not use admin dashboard then these two route will not needed.
 app.use("/admin/", adminRoutes);
