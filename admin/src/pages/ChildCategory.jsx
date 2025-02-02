@@ -12,7 +12,7 @@ import {
   TableHeader,
 } from "@windmill/react-ui";
 import { useContext, useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { FiChevronRight, FiEdit, FiPlus, FiTrash2 } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
 
@@ -43,7 +43,7 @@ const ChildCategory = () => {
   const { data, loading, error } = useAsync(CategoryServices.getAllCategory);
 
  
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   useEffect(() => {
     const getAncestors = (target, children, ancestors = []) => {
