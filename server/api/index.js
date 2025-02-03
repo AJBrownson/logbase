@@ -17,6 +17,7 @@ const homePageRoutes = require("../routes/homepageRoutes");
 const cartRoutes = require('../routes/cartRoutes');
 const reviewsRoutes = require('../routes/reviewRoutes');
 const walletRoutes = require('../routes/walletRoutes');
+const uploadRoutes = require('../routes/imageUploadRoutes')
 
 connectDB();
 const app = express();
@@ -51,6 +52,9 @@ app.use("/homepage/", homePageRoutes);
 
 // wallet routes
 app.use("/wallet", walletRoutes);
+
+// Cloudinary Image upload route
+app.use('/images/', uploadRoutes);
 
 //if you not use admin dashboard then these two route will not needed.
 app.use("/admin/", adminRoutes);

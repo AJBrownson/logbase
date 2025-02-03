@@ -35,6 +35,7 @@ import Uploader from "@/components/image-uploader/Uploader";
 import UploaderThree from "@/components/image-uploader/UploaderThree";
 import useProductSubmit from "@/hooks/useProductSubmit";
 import useUtilsFunction from "@/hooks/useUtilsFunction";
+import ImageUpload from "@/components/ImageUpload/ImageUpload";
 
 //internal import
 
@@ -100,13 +101,13 @@ const ProductDrawer = ({ id }) => {
           </div>
         }
       >
-        <div className="cursor-pointer">
+        {/* <div className="cursor-pointer">
           <UploaderThree
             imageUrl={imageUrl}
             setImageUrl={setImageUrl}
             handleSelectImage={handleSelectImage}
           />
-        </div>
+        </div> */}
       </Modal>
 
       <div className="w-full relative p-6 border-b border-gray-100 bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
@@ -114,15 +115,15 @@ const ProductDrawer = ({ id }) => {
           <Title
             register={register}
             handleSelectLanguage={handleSelectLanguage}
-            title={"UpdateProduct"}
-            description={"UpdateProductDescription"}
+            title={"Update Product"}
+            description={"Update Product Description"}
           />
         ) : (
           <Title
             register={register}
             handleSelectLanguage={handleSelectLanguage}
-            title={"DrawerAddProduct"}
-            description={"AddProductDescription"}
+            title={"Drawer Add Product"}
+            description={"Add Product Description"}
           />
         )}
       </div>
@@ -164,7 +165,7 @@ const ProductDrawer = ({ id }) => {
                 <div className="col-span-8 sm:col-span-4">{productId}</div>
               </div> */}
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductTitleName"} />
+                <LabelArea label={"Product Title Name"} />
                 <div className="col-span-8 sm:col-span-4">
                   <Input
                     {...register(`title`, {
@@ -172,14 +173,14 @@ const ProductDrawer = ({ id }) => {
                     })}
                     name="title"
                     type="text"
-                    placeholder={"ProductTitleName"}
+                    placeholder={"Product Title Name"}
                     onBlur={(e) => handleProductSlug(e.target.value)}
                   />
                   <Error errorName={errors.title} />
                 </div>
               </div>
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductDescription"} />
+                <LabelArea label={"Product Description"} />
                 <div className="col-span-8 sm:col-span-4">
                   <Textarea
                     className="border text-sm  block w-full bg-gray-100 border-gray-200"
@@ -187,7 +188,7 @@ const ProductDrawer = ({ id }) => {
                       required: false,
                     })}
                     name="description"
-                    placeholder={"ProductDescription"}
+                    placeholder={"Product Description"}
                     rows="4"
                     spellCheck="false"
                   />
@@ -195,8 +196,11 @@ const ProductDrawer = ({ id }) => {
                 </div>
               </div>
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductImage"} />
+                <LabelArea label={"Product Image"} />
                 <div className="col-span-8 sm:col-span-4">
+                  <ImageUpload
+                    onImageUpload={(url) => setImageUrl(url)} // Pass the image URL to the parent component
+                  />
                   <Uploader
                     product
                     folder="product"
@@ -207,30 +211,30 @@ const ProductDrawer = ({ id }) => {
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductSKU"} />
+                <LabelArea label={"Product SKU"} />
                 <div className="col-span-8 sm:col-span-4">
                   <InputArea
                     register={register}
                     required="false"
-                    label={"ProductSKU"}
+                    label={"Product SKU"}
                     name="sku"
                     type="text"
-                    placeholder={"ProductSKU"}
+                    placeholder={"Product SKU"}
                   />
                   <Error errorName={errors.sku} />
                 </div>
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductBarcode"} />
+                <LabelArea label={"Product Barcode"} />
                 <div className="col-span-8 sm:col-span-4">
                   <InputArea
                     register={register}
                     required="false"
-                    label={"ProductBarcode"}
+                    label={"Product Barcode"}
                     name="barcode"
                     type="text"
-                    placeholder={"ProductBarcode"}
+                    placeholder={"Product Barcode"}
                   />
                   <Error errorName={errors.barcode} />
                 </div>
@@ -249,7 +253,7 @@ const ProductDrawer = ({ id }) => {
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"DefaultCategory"} />
+                <LabelArea label={"Default Category"} />
                 <div className="col-span-8 sm:col-span-4">
                   <Multiselect
                     displayValue="name"
@@ -289,7 +293,7 @@ const ProductDrawer = ({ id }) => {
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"SalePrice"} />
+                <LabelArea label={"Sale Price"} />
                 <div className="col-span-8 sm:col-span-4">
                   <InputValue
                     disabled={isCombination}
@@ -308,7 +312,7 @@ const ProductDrawer = ({ id }) => {
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6 relative">
-                <LabelArea label={"ProductQuantity"} />
+                <LabelArea label={"Product Quantity"} />
                 <div className="col-span-8 sm:col-span-4">
                   <InputValueFive
                     disabled={isCombination}
@@ -318,14 +322,14 @@ const ProductDrawer = ({ id }) => {
                     label="Quantity"
                     name="stock"
                     type="number"
-                    placeholder={"ProductQuantity"}
+                    placeholder={"Product Quantity"}
                   />
                   <Error errorName={errors.stock} />
                 </div>
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductSlug"} />
+                <LabelArea label={"Product Slug"} />
                 <div className="col-span-8 sm:col-span-4">
                   <Input
                     {...register(`slug`, {
@@ -335,7 +339,7 @@ const ProductDrawer = ({ id }) => {
                     name="slug"
                     type="text"
                     defaultValue={slug}
-                    placeholder={"ProductSlug"}
+                    placeholder={"Product Slug"}
                     onBlur={(e) => handleProductSlug(e.target.value)}
                   />
                   <Error errorName={errors.slug} />
@@ -343,10 +347,10 @@ const ProductDrawer = ({ id }) => {
               </div>
 
               <div className="grid grid-cols-6 gap-3 md:gap-5 xl:gap-6 lg:gap-6 mb-6">
-                <LabelArea label={"ProductTag"} />
+                <LabelArea label={"Product Tag"} />
                 <div className="col-span-8 sm:col-span-4">
                   <ReactTagInput
-                    placeholder={"ProductTagPlaseholder"}
+                    placeholder={"Product Tag Placeholder"}
                     tags={tag}
                     onChange={(newTags) => setTag(newTags)}
                   />

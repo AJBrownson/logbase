@@ -178,8 +178,8 @@ const Uploader = ({ setImageUrl, imageUrl, product, folder }) => {
         <span className="mx-auto flex justify-center">
           <FiUploadCloud className="text-3xl text-emerald-500" />
         </span>
-        <p className="text-sm mt-2">{"DragYourImage"}</p>
-        <em className="text-xs text-gray-400">{"imageFormat"}</em>
+        <p className="text-sm mt-2">{"Drag and Drop Your Image"}</p>
+        <em className="text-xs text-gray-400">{"image Format"}</em>
       </div>
 
       <div className="text-emerald-500">{loading && err}</div>

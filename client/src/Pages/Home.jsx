@@ -61,29 +61,84 @@ const Home = () => {
           </button>
         </div>
       </header>
+      <div className="font-sans bg-gray-900 text-white">
+      {/* Hero Section */}
+      <section className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-900 to-indigo-900">
+        <h1 className="text-6xl font-bold mb-4 animate-fade-in">
+          Welcome to Trixland
+        </h1>
+        <p className="text-xl mb-8 animate-fade-in delay-100">
+          Your gateway to amazing experiences.
+        </p>
+        <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+          Get Started
+        </button>
+      </section>
 
-      {/* hero */}
-      <section className="dark:bg-gray-100 dark:text-gray-800">
-        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-          <h1 className="text-4xl font-bold leading-none sm:text-5xl">
-            Quisquam necessita vel
-            <span className="dark:text-black">laborum doloribus</span>
-            delectus
-          </h1>
-          <p className="px-8 mt-8 mb-12 text-lg">
-            Cupiditate minima voluptate temporibus quia? Architecto beatae esse
-            ab amet vero eaque explicabo!
-          </p>
-          <a href="/loginsignup" className="flex flex-wrap justify-center">
-            <button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-orange-500 dark:text-white">
-              Buy Now
-            </button>
-            {/* <button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300">
-              Learn more
-            </button> */}
-          </a>
+      {/* Features Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((feature) => (
+              <div
+                key={feature}
+                className="bg-gray-700 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="text-center">
+                  <div className="text-purple-500 text-4xl mb-4">✨</div>
+                  <h3 className="text-2xl font-bold mb-4">Feature {feature}</h3>
+                  <p className="text-gray-300">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((testimonial) => (
+              <div
+                key={testimonial}
+                className="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <p className="text-gray-300 mb-4">
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </p>
+                <p className="text-purple-500 font-bold">- User {testimonial}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-10 border-t border-gray-800">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-400">
+            &copy; 2023 Trixland. All rights reserved.
+          </p>
+          <div className="flex justify-center space-x-4 mt-4">
+            <a href="#" className="text-gray-400 hover:text-purple-500">
+              Twitter
+            </a>
+            <a href="#" className="text-gray-400 hover:text-purple-500">
+              Facebook
+            </a>
+            <a href="#" className="text-gray-400 hover:text-purple-500">
+              Instagram
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
     </>
   );
 };

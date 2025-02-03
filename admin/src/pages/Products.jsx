@@ -92,7 +92,7 @@ const Products = () => {
 
   return (
     <>
-      <PageTitle>{"ProductsPage"}</PageTitle>
+      <PageTitle>{"Products Page"}</PageTitle>
       <DeleteModal ids={allId} setIsCheck={setIsCheck} title={title} />
       <BulkActionDrawer ids={allId} title="Products" />
       <MainDrawer>
@@ -125,7 +125,7 @@ const Products = () => {
                   <span className="mr-2">
                     <FiEdit />
                   </span>
-                  {"BulkAction"}
+                  {"Bulk Action"}
                 </Button>
               </div>
               <div className="flex-grow-0 md:flex-grow lg:flex-grow xl:flex-grow">
@@ -149,7 +149,7 @@ const Products = () => {
                   <span className="mr-2">
                     <FiPlus />
                   </span>
-                  {"AddProduct"}
+                  {"Add Product"}
                 </Button>
               </div>
             </div>
@@ -237,13 +237,13 @@ const Products = () => {
                     handleClick={handleSelectAll}
                   />
                 </TableCell>
-                <TableCell>{"ProductNameTbl"}</TableCell>
-                <TableCell>{"CategoryTbl"}</TableCell>
-                <TableCell>{"PriceTbl"}</TableCell>
+                <TableCell>{"ProductName"}</TableCell>
+                <TableCell>{"Category"}</TableCell>
+                <TableCell>{"Price"}</TableCell>
                 <TableCell>Brand</TableCell>
                 <TableCell>Out Of Stock</TableCell>
 
-                <TableCell className="text-right">{"ActionsTbl"}</TableCell>
+                <TableCell className="text-right">{"Actions"}</TableCell>
               </tr>
             </TableHeader>
             <ProductTable
