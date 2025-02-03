@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { FaCartPlus, FaStar } from "react-icons/fa";
 // import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, fetchProductsByCategory } from "../../Features/Product/productSlice";
+import { fetchProducts } from "../../Features/Product/productSlice";
 
 
 export default function AvailableProducts() {
@@ -45,12 +45,12 @@ export default function AvailableProducts() {
                         // className="sdProduct_front"
                         className=""
                       />
-                      <img
+                      {/* <img
                         src={product.image[1]}
                         alt=""
                         className=""
                         // className="sdProduct_back"
-                      />
+                      /> */}
                     </div>
                   </div>
                   {/* <div className="sdProductInfo"> */}
@@ -70,7 +70,7 @@ export default function AvailableProducts() {
                       </p>
 
                       <div className="mt-3">
-                        <button className="w-full px-4 py-2 bg-orange-500 text-white font-medium rounded hover:bg-orange-600 transition">
+                        <button className="w-full px-4 py-2 bg-[#25D366] text-black font-medium rounded hover:bg-black hover:text-white transition">
                           Buy Now
                         </button>
                       </div>
