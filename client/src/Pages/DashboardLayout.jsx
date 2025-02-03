@@ -24,8 +24,20 @@ const DashboardLayout = () => {
     { path: `/dashboard/overview`, icon: <MdDashboard className="w-6 h-6" />, title: "Dashboard" },
     { path: `/dashboard/products`, icon: <MdShoppingBag className="w-6 h-6" />, title: "Products" },
     { path: `/dashboard/buy-followers`, icon: <MdPeople className="w-6 h-6" />, title: "Buy Followers" },
-    { path: `/dashboard/orders`, icon: <MdShoppingCart className="w-6 h-6" />, title: "Orders" },
-    { path: `/dashboard/wallet`, icon: <MdAccountBalanceWallet className="w-6 h-6" />, title: "Wallet" },
+    // { path: `/dashboard/orders`, icon: <MdShoppingCart className="w-6 h-6" />, title: "Orders" },
+    // { path: `/dashboard/wallet`, icon: <MdAccountBalanceWallet className="w-6 h-6" />, title: "Wallet" },
+    {
+      // path: `/dashboard/wallet`,
+      icon: <MdAccountBalanceWallet className="w-6 h-6" />,
+      title: (
+        <span className="flex items-center">
+          Wallet
+          <span className="ml-2 px-2 py-1 text-xs font-semibold bg-[#25D366] text-black rounded-md">
+            Coming Soon
+          </span>
+        </span>
+      ),
+    },
   ];
 
   // Handle Logout

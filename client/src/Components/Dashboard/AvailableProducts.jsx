@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import { FaCartPlus, FaStar } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 // import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../Features/Product/productSlice";
+import { Link } from "react-router-dom";
 
 
 export default function AvailableProducts() {
@@ -36,14 +37,14 @@ export default function AvailableProducts() {
               products.length > 0 &&
               products.map((product, index) => (
                 // <div className="sdProductContainer" key={index}>
-                <div key={index} className="border border-slate-500">
+                <div key={index} className="border border-slate-500 bg-white shadow-lg rounded-lg">
                   <div className="sdProductImages">
                     <div>
                       <img
                         src={product.image[0]}
                         alt=""
                         // className="sdProduct_front"
-                        className=""
+                        className="object-contain w-40 h-40"
                       />
                       {/* <img
                         src={product.image[1]}
@@ -54,7 +55,7 @@ export default function AvailableProducts() {
                     </div>
                   </div>
                   {/* <div className="sdProductInfo"> */}
-                  <div className="p-1">
+                  <div className="p-1 border-t-2">
                     <div className="sdProductCategoryWishlist">
                       {/* <p>{product.category.name}</p> */}
                     </div>
@@ -70,9 +71,14 @@ export default function AvailableProducts() {
                       </p>
 
                       <div className="mt-3">
-                        <button className="w-full px-4 py-2 bg-[#25D366] text-black font-medium rounded hover:bg-black hover:text-white transition">
+                        <a href={`https://wa.me/2348100105085?text=I'm%20interested%20in%20buying%20${product.title}`} target="_blank"
+                        >
+                        <button
+                        className="flex items-center justify-center gap-x-2 w-full px-4 py-2 bg-[#25D366] text-black font-medium rounded hover:bg-black hover:text-white transition">
                           Buy Now
+                          <FaWhatsapp size={20} />
                         </button>
+                        </a>
                       </div>
                     </div>
                   </div>
