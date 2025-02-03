@@ -3,7 +3,9 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const instance = axios.create({
-  baseURL: `http://localhost:3002`,
+  // baseURL: `http://localhost:3002`,
+  // baseURL: `https://logbase-server.vercel.app/`,
+  baseURL:  `https://logbase.onrender.com`,
   timeout: 50000,
   headers: {
     Accept: "application/json",
