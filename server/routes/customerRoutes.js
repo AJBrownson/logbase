@@ -4,7 +4,7 @@ const {
   loginCustomer,
   registerCustomer,
   signUpWithProvider,
-  verifyEmailAddress,
+  // verifyEmailAddress,
   forgetPassword,
   changePassword,
   resetPassword,
@@ -20,7 +20,7 @@ const {
 } = require("../lib/email-sender/sender");
 
 //verify email
-router.post("/verify-email",   verifyEmailAddress);
+// router.post("/verify-email",   verifyEmailAddress);
 
 //register a user
 router.post("/register/:token", registerCustomer);

@@ -16,7 +16,8 @@ export const signup = createAsyncThunk(
   "auth/signup",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await baseApi.post("/customer/verify-email", userData);
+      // const response = await baseApi.post("/customer/verify-email", userData);
+      const response = await baseApi.post("/customer/register", userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);

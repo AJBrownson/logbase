@@ -27,8 +27,8 @@ export default function AvailableProducts() {
   return (
     <>
       <section>
-        <div className="shopDetailsProducts">
-          <div className="shopDetailsProductsContainer">
+        <div className="">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
             {productStatus === "loading" && <p>Loading...</p>}
             {productStatus === "failed" && <p>{productError}</p>}
             {productStatus === "succeeded" &&
@@ -38,29 +38,19 @@ export default function AvailableProducts() {
               products.map((product, index) => (
                 // <div className="sdProductContainer" key={index}>
                 <div key={index} className="border border-slate-500 bg-white shadow-lg rounded-lg">
-                  <div className="sdProductImages">
-                    <div>
+                  <div className="">
+                    <div className="flex items-center">
                       <img
                         src={product.image[0]}
                         alt=""
-                        // className="sdProduct_front"
-                        className="object-contain w-40 h-40"
+                        className="w-full object-contain h-40"
                       />
-                      {/* <img
-                        src={product.image[1]}
-                        alt=""
-                        className=""
-                        // className="sdProduct_back"
-                      /> */}
                     </div>
                   </div>
-                  {/* <div className="sdProductInfo"> */}
                   <div className="p-1 border-t-2">
                     <div className="sdProductCategoryWishlist">
                       {/* <p>{product.category.name}</p> */}
                     </div>
-
-                    {/* <div className="sdProductNameInfo"> */}
                     <div className="">
                       <h5>{product.title}</h5>
                       <p className="mt-4">

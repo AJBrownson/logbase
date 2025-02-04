@@ -1,23 +1,18 @@
 export default function WalletBalance() {
   return (
-    <div className="flex flex-col items-center justify-center h-60 max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 border border-gray-200 sm:h-auto sm:max-w-full sm:px-4">
-      <h2 className="text-lg lg:text-2xl font-semibold text-gray-800">🚀 Wallet Feature Coming Soon!</h2>
-      <p className="text-gray-600 text-center mt-2">
-        We're working hard to bring this feature to you. Stay tuned for updates!
-      </p>
-      {/* <div className="mt-4">
-        <button
-          className="px-5 py-2 bg-orange-500 text-white font-medium rounded-md shadow hover:bg-orange-600 transition"
-          onClick={() => alert("You'll be notified when this feature is live!")}
-        >
-          Notify Me
-        </button>
-      </div> */}
-    </div>
+    <>
+      <div className="bg-white shadow-lg rounded-lg border border-gray-200 p-6">
+        <h2 className="text-lg lg:text-2xl font-semibold text-gray-800 text-center">
+          Wallet Feature Coming Soon!
+        </h2>
+        <p className="text-gray-600 text-center mt-2">
+          We're working hard to bring this feature to you. Stay tuned for
+          updates!
+        </p>
+      </div>
+    </>
   );
 }
-
-
 
 // import { useState, useEffect } from "react";
 // import { FundWalletModal } from "./FundModal"
@@ -134,8 +129,8 @@ export default function WalletBalance() {
 //           setShowFundModal={setShowFundModal}
 //         />
 //       )} */}
-//         <FundWalletModal 
-//         isOpen={showFundModal} 
+//         <FundWalletModal
+//         isOpen={showFundModal}
 //         onClose={() => setShowFundModal(false)}
 //       />
 //     </>
