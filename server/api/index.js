@@ -34,6 +34,7 @@ app.use(cors({
   origin: ['https://logsbase.com', 'http://localhost:3000'],
   credentials: true,
 }));
+
 app.use(logger("dev"));
 
 //root route
