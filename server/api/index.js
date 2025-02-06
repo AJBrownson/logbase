@@ -30,12 +30,8 @@ const app = express();
 app.use(express.json({ }));
 app.use(helmet());
 // app.use(cors());
-// app.use(cors({
-//   origin: ['https://logsbase.com', 'http://localhost:3000'],
-//   // credentials: true,
-// }));
 
-const allowedOrigins = ['https://logsbase.com', 'http://localhost:3000'];
+const allowedOrigins = ['https://logsbase.com', 'http://localhost:3000', ' http://localhost:3003', 'https://admin.logbase.com'];
 
 app.use(
   cors({
@@ -46,7 +42,7 @@ app.use(
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true, // Allow cookies (if applicable)
+    credentials: true,
   })
 );
 
