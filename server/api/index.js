@@ -16,6 +16,8 @@ const settingRoutes = require("../routes/settingRoutes");
 const homePageRoutes = require("../routes/homepageRoutes");
 const cartRoutes = require('../routes/cartRoutes');
 const reviewsRoutes = require('../routes/reviewRoutes');
+const walletRoutes = require('../routes/walletRoutes');
+const uploadRoutes = require('../routes/imageUploadRoutes')
 
 connectDB();
 const app = express();
@@ -27,7 +29,11 @@ const app = express();
 
 app.use(express.json({ }));
 app.use(helmet());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://logsbase.com',
+  credentials: true,
+}));
 
 app.use(logger("dev"));
 
@@ -47,6 +53,12 @@ app.use("/cart/", cartRoutes);
 app.use("/reviews/", reviewsRoutes);
 
 app.use("/homepage/", homePageRoutes);
+
+// wallet routes
+app.use("/wallet", walletRoutes);
+
+// Cloudinary Image upload route
+app.use('/images/', uploadRoutes);
 
 //if you not use admin dashboard then these two route will not needed.
 app.use("/admin/", adminRoutes);
