@@ -30,14 +30,10 @@ const app = express();
 app.use(express.json({ }));
 app.use(helmet());
 // app.use(cors());
-// app.use(cors({
-//   origin: 'https://logsbase.com',
-//   credentials: true,
-// }));
 app.use(cors({
-  origin: ['http://localhost:3000','https://logsbase.com'],
+  origin: ['https://logsbase.com', 'http://localhost:3000'],
+  credentials: true,
 }));
-
 app.use(logger("dev"));
 
 //root route
