@@ -14,10 +14,10 @@ const categoryRoutes = require("../routes/categoryRoutes");
 const attributeRoutes = require("../routes/attributeRoutes");
 const settingRoutes = require("../routes/settingRoutes");
 const homePageRoutes = require("../routes/homepageRoutes");
-const cartRoutes = require('../routes/cartRoutes');
-const reviewsRoutes = require('../routes/reviewRoutes');
-const walletRoutes = require('../routes/walletRoutes');
-const uploadRoutes = require('../routes/imageUploadRoutes')
+const cartRoutes = require("../routes/cartRoutes");
+const reviewsRoutes = require("../routes/reviewRoutes");
+const walletRoutes = require("../routes/walletRoutes");
+const uploadRoutes = require("../routes/imageUploadRoutes");
 
 connectDB();
 const app = express();
@@ -27,11 +27,16 @@ const app = express();
 // app.enable('trust proxy');
 // app.set("trust proxy", 1);
 
-app.use(express.json({ }));
+app.use(express.json({}));
 app.use(helmet());
 // app.use(cors());
 
-const allowedOrigins = ['https://logsbase.com', 'http://localhost:3000', ' http://localhost:3003', 'https://admin.logbase.com'];
+const allowedOrigins = [
+  "https://logsbase.com",
+  "http://localhost:3000",
+  "http://localhost:3003",
+  "https://admin.logsbase.com",
+];
 
 app.use(
   cors({
@@ -39,7 +44,7 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error('Not allowed by CORS'));
+        callback(new Error("Not allowed by CORS"));
       }
     },
     credentials: true,
@@ -69,7 +74,7 @@ app.use("/homepage/", homePageRoutes);
 app.use("/wallet", walletRoutes);
 
 // Cloudinary Image upload route
-app.use('/images/', uploadRoutes);
+app.use("/images/", uploadRoutes);
 
 //if you not use admin dashboard then these two route will not needed.
 app.use("/admin/", adminRoutes);
