@@ -25,9 +25,11 @@ const SidebarContent = () => {
     <div className="py-4 text-gray-500 dark:text-gray-400">
       <a className=" text-gray-900 dark:text-gray-200" href="/dashboard">
         {mode === "dark" ? (
-          <img src={logoLight} alt="kachabazar" width="135" className="pl-6" />
+          // <img src={logoLight} alt="logsbase" width="135" className="pl-6" />
+          <h1 className="pl-6 text-2xl font-bold text-emerald-500">Logsbase</h1>
         ) : (
-          <img src={logoDark} alt="kachabazar" width="135" className="pl-6" />
+          // <img src={logoDark} alt="logsbase" width="135" className="pl-6" />
+          <h1 className="pl-6 text-2xl font-bold text-emerald-500">Logsbase</h1>
         )}
       </a>
       <ul className="mt-8">

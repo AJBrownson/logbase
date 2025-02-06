@@ -12,7 +12,7 @@ const Home = () => {
             {/* <a href="#pricing" className="hover:text-[#25D366]">Pricing</a> */}
             {/* <a href="#contact" className="hover:text-[#25D366]">Contact</a> */}
           </nav>
-          <a href="/loginsignup" className="bg-[#25D366] text-white px-4 py-2 rounded-lg hover:bg-[#25D366]">
+          <a href="/loginsignup" className="bg-[#25D366] text-black px-4 py-2 rounded-lg hover:bg-[#25D366]">
             Get Started
           </a>
         </div>
@@ -22,12 +22,12 @@ const Home = () => {
       <section className="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-br from-[#25D366] to-green-900 text-white">
         <div>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            Boost Your Social Presence <br /> Instantly 🚀
+            Boost Your Social Presence <br /> With Logsbase
           </h2>
           <p className="mt-4 text-lg md:text-xl opacity-90">
             Get real numbers, likes, and views to grow your influence effortlessly.
           </p>
-          <a href="/loginsignup" className="mt-6 inline-block bg-white text-[#25D366] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100">
+          <a href="/loginsignup" className="mt-6 inline-block bg-white text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100">
             Get Started Now
           </a>
         </div>
@@ -59,7 +59,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-10 px-6 text-center">
         <p className="text-lg font-semibold">Ready to go viral? 🚀</p>
-        <a href="/loginsignup" className="mt-4 inline-block bg-[#25D366] px-6 py-3 rounded-lg text-white font-semibold">
+        <a href="/loginsignup" className="mt-4 inline-block bg-[#25D366] px-6 py-3 rounded-lg text-black font-semibold">
           Get Started Now
         </a>
         <p className="mt-6 text-gray-400">&copy; {new Date().getFullYear()} Logsbase. All rights reserved.</p>

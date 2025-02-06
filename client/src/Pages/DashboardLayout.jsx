@@ -60,7 +60,7 @@ const DashboardLayout = () => {
       >
         {/* Logo */}
         <div className="p-4 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-gray-800">Logsbase</h2>
+          <h2 className="text-xl font-bold text-[#25D366]">Logsbase</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200"

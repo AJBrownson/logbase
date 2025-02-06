@@ -89,7 +89,7 @@ const LoginSignUp = () => {
                     })
                   }
                 />
-                <div className="loginSignUpForgetPass">
+                {/* <div className="loginSignUpForgetPass">
                   <label>
                     <input type="checkbox" className="brandRadio" />
                     <p>Remember me</p>
@@ -97,7 +97,7 @@ const LoginSignUp = () => {
                   <p>
                     <Link to="/resetPassword">Lost password?</Link>
                   </p>
-                </div>
+                </div> */}
                 {authStatus === "loading" ? (
                   <CircularProgress />
                 ) : (
@@ -144,7 +144,7 @@ const LoginSignUp = () => {
                     setUserData({ ...userData, password: e.target.value })
                   }
                 />
-                <p>
+                {/* <p>
                   Your personal data will be used to support your experience
                   throughout this website, to manage access to your account,
                   and for other purposes described in our
@@ -156,7 +156,7 @@ const LoginSignUp = () => {
                     privacy policy
                   </Link>
                   .
-                </p>
+                </p> */}
                 {authStatus === "loading" ? (
                   <CircularProgress />
                 ) : (

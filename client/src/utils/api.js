@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const baseApi = axios.create({
-  baseURL: 'http://localhost:3002', // Replace with your actual base URL
+  // baseURL: 'http://localhost:3002', // Replace with your actual base URL
+  baseURL:  `https://logbase.onrender.com`,
   headers: {
     'Content-Type': 'application/json',
   },
