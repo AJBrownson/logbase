@@ -5,12 +5,12 @@ import { logout } from "../Features/Auth/authSlice";
 import {
   MdDashboard,
   MdShoppingBag,
-  MdPeople,
   MdAccountBalanceWallet,
   MdExitToApp,
   MdMenu,
   MdClose,
 } from "react-icons/md";
+import WhatsAppChat from "../Components/WhatsAppButton/WhatsAppButton";
 
 const DashboardLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -122,6 +122,8 @@ const DashboardLayout = () => {
 
           <Outlet />
         </div>
+
+        <WhatsAppChat />
       </div>
     </div>
   );

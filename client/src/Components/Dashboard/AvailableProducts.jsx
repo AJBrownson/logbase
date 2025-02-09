@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-// import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../Features/Product/productSlice";
-import { Link } from "react-router-dom";
 
 
 export default function AvailableProducts() {
